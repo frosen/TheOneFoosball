@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655B1E521CC720710054814E /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B1E511CC720710054814E /* DataBase.swift */; };
 		655E9C631CC52CC0004680DA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E9C621CC52CC0004680DA /* Network.swift */; };
 		6566BECF1CC4A915001645AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566BECE1CC4A915001645AD /* AppDelegate.swift */; };
 		6566BED61CC4A915001645AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6566BED41CC4A915001645AD /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		04CAC2AA210436DEF0540C15 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1C72235706B603DE8D6EFFE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		655B1E511CC720710054814E /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		655E9C5B1CC52B76004680DA /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		655E9C621CC52CC0004680DA /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Network/Network.swift; sourceTree = "<group>"; };
 		6566BECB1CC4A915001645AD /* TheOneFoosball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOneFoosball.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,14 +90,15 @@
 		6566BECD1CC4A915001645AD /* TheOneFoosball */ = {
 			isa = PBXGroup;
 			children = (
-				655E9C5D1CC52C38004680DA /* Network */,
-				655E9C5C1CC52C2F004680DA /* UI */,
+				655E9C5B1CC52B76004680DA /* Bridging.h */,
+				6566BEDC1CC4A915001645AD /* Info.plist */,
 				6566BECE1CC4A915001645AD /* AppDelegate.swift */,
-				6566BED41CC4A915001645AD /* Main.storyboard */,
+				655B1E511CC720710054814E /* DataBase.swift */,
 				6566BED71CC4A915001645AD /* Assets.xcassets */,
 				6566BED91CC4A915001645AD /* LaunchScreen.storyboard */,
-				6566BEDC1CC4A915001645AD /* Info.plist */,
-				655E9C5B1CC52B76004680DA /* Bridging.h */,
+				6566BED41CC4A915001645AD /* Main.storyboard */,
+				655E9C5D1CC52C38004680DA /* Network */,
+				655E9C5C1CC52C2F004680DA /* UI */,
 			);
 			path = TheOneFoosball;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				65E59CFA1CC67796008F2050 /* MatchCell.swift in Sources */,
 				6566BECF1CC4A915001645AD /* AppDelegate.swift in Sources */,
+				655B1E521CC720710054814E /* DataBase.swift in Sources */,
 				655E9C631CC52CC0004680DA /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

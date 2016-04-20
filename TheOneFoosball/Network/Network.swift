@@ -7,10 +7,15 @@
 //
 
 /*
-比赛：名字string，比赛双方[id], 备注string，局数int，比分[(int, int),]，是否兑现bool
- 
- 
-*/
+ 比赛：
+ matchName 名字 string，
+ teamNameArray 比赛双方 [id],
+ remarks 备注 string，
+ inningNum 局数 int，
+ scoreList 比分 [(int, int),]，
+ hasRewarded 是否兑现 bool
+
+ */
 
 import Foundation
 
@@ -23,22 +28,29 @@ class Network {
     }
 
     //创建一场比赛
-    func createMatch() {
+    func createMatch(match: MatchInfo) {
         print("create match")
 
-        let score = [[10, 4], [10, 6]]
-        let a = AVObject(className: "match_list")
-        a.setObject(score, forKey: "score")
-        a.save()
+        let obj = AVObject(className: "match_list")
+
+        obj.setObject(match.matchName, forKey: "matchName")
+        obj.setObject(match.teamNameArray, forKey: "teamNameArray")
+        obj.setObject(match.remarks, forKey: "remarks")
+        obj.setObject(match.inningNum, forKey: "inningNum")
+        obj.setObject(match.scoreList, forKey: "scoreList")
+        obj.setObject(match.hasRewarded, forKey: "hasRewarded")
+
+        obj.saveInBackground()
     }
 
     //更新比赛
-    func updateMatch() {
+    func updateMatch(match: MatchInfo) {
 
     }
 
     //获取比赛信息表
-    func getMatchList() {
+    func getMatchList() ->[MatchInfo] {
 
+        return []
     }
 }
