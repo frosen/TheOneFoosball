@@ -58,8 +58,8 @@
 		655E9C5C1CC52C2F004680DA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				65E59CF91CC67796008F2050 /* MatchCell.swift */,
 				656FD6A61CC91A3D0051ED17 /* DetailViewController.swift */,
+				65E59CF91CC67796008F2050 /* MatchCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";

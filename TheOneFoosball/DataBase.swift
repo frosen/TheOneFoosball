@@ -20,7 +20,7 @@ import Foundation
  */
 class MatchInfo {
     var matchName: String = ""
-    var teamNameArray: [Int] = []
+    var teamNameArray: [String] = []
     var remarks: String = ""
     var inningNum: Int = 1
     var scoreList: [[Int]] = []

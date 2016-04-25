@@ -40,7 +40,7 @@ class Network {
         obj.setObject(match.scoreList, forKey: "scoreList")
         obj.setObject(match.hasRewarded, forKey: "hasRewarded")
 
-        obj.saveInBackground()
+        obj.save()
     }
 
     //更新比赛
