@@ -43,7 +43,13 @@ class Network {
         let option = AVSaveOption()
         option.fetchWhenSave = true
 
-        obj.saveInBackgroundWithOption(option, block: callback)
+        obj.saveInBackgroundWithOption(option, block: { suc, e in
+            if suc == true {
+                self.getMatchList()
+
+            }
+            callback(suc: true, e: e)
+        })
     }
 
     //更新比赛
@@ -53,7 +59,15 @@ class Network {
 
     //获取比赛信息表
     func getMatchList() ->[MatchInfo] {
+        let q = AVQuery(className: "match_list")
+        let objList = q.findObjects()
 
-        return []
+        let ret: [MatchInfo] = []
+
+        for obj in objList {
+            print(obj.objectForKey("matchName"))
+        }
+
+        return ret
     }
 }

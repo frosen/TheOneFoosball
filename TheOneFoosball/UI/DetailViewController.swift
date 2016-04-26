@@ -121,9 +121,7 @@ class DetailViewController: UITableViewController {
 
     //导航
     @IBAction func onBack(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            NSLog("关闭模态视图")
-        })
+        self.navigationController!.popViewControllerAnimated(true)
     }
 
 
@@ -135,22 +133,28 @@ class DetailViewController: UITableViewController {
 
         info.inningNum = Int(inningNumStepper.value)
 
-        for k in 1...info.inningNum {
-            let stepL = cellList[k].viewWithTag(1) as! UIStepper
-            let stepR = cellList[k].viewWithTag(2) as! UIStepper
-
-            info.scoreList.append([Int(stepL.value), Int(stepR.value)])
-
-        }
+//        for k in 1...info.inningNum {
+//            let stepL = cellList[k].viewWithTag(1) as! UIStepper
+//            let stepR = cellList[k].viewWithTag(2) as! UIStepper
+//
+//            info.scoreList.append([Int(stepL.value), Int(stepR.value)])
+//
+//        }
 
         //传输数据，成功后返回，否则弹框提示
-        Network.shareInstance.createMatch(info, callback: { suc, e in
-            if suc == true {
-                self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                    NSLog("保存成功")
-                })
-            } else {
+        let loading = UIActivityIndicatorView()
+        view.addSubview(loading)
+        loading.center = view.center
+        loading.activityIndicatorViewStyle = .White
+        loading.startAnimating()
 
+        Network.shareInstance.createMatch(info, callback: { suc, e in
+            loading.stopAnimating()
+            if suc == true {
+                self.navigationController!.popViewControllerAnimated(true)
+            } else {
+                let alert = UIAlertView(title: "错误", message: "可能没网", delegate: self, cancelButtonTitle: "好吧")
+                alert.show()
             }
         })
 

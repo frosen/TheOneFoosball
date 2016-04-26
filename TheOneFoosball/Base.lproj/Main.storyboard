@@ -1471,6 +1471,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Ofk-on-5Yg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JE1-fP-28I">
+                            <connections>
+                                <action selector="onBack:" destination="RmV-zl-hW2" id="uGc-dk-JdA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="u0X-wP-Njl">
                             <connections>
                                 <action selector="onSave:" destination="RmV-zl-hW2" id="qfs-cr-fAW"/>
