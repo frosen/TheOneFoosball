@@ -120,11 +120,12 @@ class DetailViewController: UITableViewController {
 
 
     //导航
-    @IBAction func onCancel(sender: AnyObject) {
+    @IBAction func onBack(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
             NSLog("关闭模态视图")
         })
     }
+
 
     @IBAction func onSave(sender: AnyObject) {
         //整理数据
