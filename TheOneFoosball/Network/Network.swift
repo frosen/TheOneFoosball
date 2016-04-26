@@ -28,7 +28,7 @@ class Network {
     }
 
     //创建一场比赛
-    func createMatch(match: MatchInfo) {
+    func createMatch(match: MatchInfo, callback: (suc: Bool, e: NSError?) -> Void) {
         print("create match")
 
         let obj = AVObject(className: "match_list")
@@ -40,7 +40,10 @@ class Network {
         obj.setObject(match.scoreList, forKey: "scoreList")
         obj.setObject(match.hasRewarded, forKey: "hasRewarded")
 
-        obj.save()
+        let option = AVSaveOption()
+        option.fetchWhenSave = true
+
+        obj.saveInBackgroundWithOption(option, block: callback)
     }
 
     //更新比赛

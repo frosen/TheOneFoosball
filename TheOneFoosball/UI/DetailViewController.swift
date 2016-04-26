@@ -129,7 +129,7 @@ class DetailViewController: UITableViewController {
 
     @IBAction func onSave(sender: AnyObject) {
         //整理数据
-        var info = MatchInfo()
+        let info = MatchInfo()
         info.matchName = inningName.text!
         info.teamNameArray = ["海盐", "铎益"]
 
@@ -144,9 +144,16 @@ class DetailViewController: UITableViewController {
         }
 
         //传输数据，成功后返回，否则弹框提示
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            NSLog("保存成功")
+        Network.shareInstance.createMatch(info, callback: { suc, e in
+            if suc == true {
+                self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    NSLog("保存成功")
+                })
+            } else {
+
+            }
         })
+
     }
 
     override func viewDidLoad() {
