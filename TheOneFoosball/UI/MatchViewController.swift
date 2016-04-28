@@ -24,6 +24,12 @@ class MatchViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let loading = UIActivityIndicatorView()
+        view.addSubview(loading)
+        loading.center = view.center
+        loading.activityIndicatorViewStyle = .WhiteLarge
+        loading.startAnimating()
+
     }
 
     override func didReceiveMemoryWarning() {

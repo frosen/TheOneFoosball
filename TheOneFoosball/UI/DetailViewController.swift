@@ -124,7 +124,6 @@ class DetailViewController: UITableViewController {
         self.navigationController!.popViewControllerAnimated(true)
     }
 
-
     @IBAction func onSave(sender: AnyObject) {
         //整理数据
         let info = MatchInfo()
@@ -133,13 +132,13 @@ class DetailViewController: UITableViewController {
 
         info.inningNum = Int(inningNumStepper.value)
 
-//        for k in 1...info.inningNum {
-//            let stepL = cellList[k].viewWithTag(1) as! UIStepper
-//            let stepR = cellList[k].viewWithTag(2) as! UIStepper
-//
-//            info.scoreList.append([Int(stepL.value), Int(stepR.value)])
-//
-//        }
+        for k in 1...info.inningNum {
+            let stepL = cellList[k].viewWithTag(11) as! UIStepper
+            let stepR = cellList[k].viewWithTag(12) as! UIStepper
+
+            info.scoreList.append([Int(stepL.value), Int(stepR.value)])
+
+        }
 
         //传输数据，成功后返回，否则弹框提示
         let loading = UIActivityIndicatorView()

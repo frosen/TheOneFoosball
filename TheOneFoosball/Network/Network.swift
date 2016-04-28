@@ -59,13 +59,24 @@ class Network {
 
     //获取比赛信息表
     func getMatchList() ->[MatchInfo] {
+        let obj = AVObject(className: "match_list")
+        obj.fetchInBackgroundWithBlock({o, e in
+            print(o.dynamicType, e.dynamicType)
+
+            let q2 = AVQuery(className: "match_list")
+            let objList2 = q2.findObjects()
+            for oo in objList2 {
+                print(oo.objectForKey("matchName"), oo.objectId)
+            }
+        })
+
         let q = AVQuery(className: "match_list")
         let objList = q.findObjects()
 
         let ret: [MatchInfo] = []
 
         for obj in objList {
-            print(obj.objectForKey("matchName"))
+            print(obj.objectForKey("matchName"), obj.objectId)
         }
 
         return ret
