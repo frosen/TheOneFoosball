@@ -51,6 +51,12 @@ class Network {
 
     }
 
+    func getMatch(id: String) -> MatchInfo {
+        let q = AVQuery(className: "match_list")
+        let obj = q.getObjectWithId(id)
+        return createMatchFromObj(obj)
+    }
+
     //获取比赛信息表
     func getMatchList(callback: (suc: Bool, list: [MatchInfo]) -> Void) {
         let q = AVQuery(className: "match_list")
@@ -66,20 +72,24 @@ class Network {
             var matchList: [MatchInfo] = []
 
             for obj in objList {
-                let match = MatchInfo()
-                match.id = obj.objectId as String
-                match.matchName = obj.objectForKey("matchName") as! String
-                match.teamNameArray = obj.objectForKey("teamNameArray") as! [String]
-                match.remarks = obj.objectForKey("remarks") as! String
-                match.inningNum = obj.objectForKey("inningNum") as! Int
-                match.scoreList = obj.objectForKey("scoreList") as! [[Int]]
-                match.hasRewarded = obj.objectForKey("hasRewarded") as! Bool
-                match.createTime = obj.createdAt
-                matchList.append(match)
+                matchList.append(self.createMatchFromObj(obj))
             }
 
             callback(suc: true, list: matchList)
         })
 
+    }
+
+    private func createMatchFromObj(obj: AVObject) -> MatchInfo {
+        let match = MatchInfo()
+        match.id = obj.objectId as String
+        match.matchName = obj.objectForKey("matchName") as! String
+        match.teamNameArray = obj.objectForKey("teamNameArray") as! [String]
+        match.remarks = obj.objectForKey("remarks") as! String
+        match.inningNum = obj.objectForKey("inningNum") as! Int
+        match.scoreList = obj.objectForKey("scoreList") as! [[Int]]
+        match.hasRewarded = obj.objectForKey("hasRewarded") as! Bool
+        match.createTime = obj.createdAt
+        return match
     }
 }

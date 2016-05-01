@@ -10,13 +10,14 @@ import Foundation
 
 /*
  比赛：
+     id 标示 string,
      matchName 名字 string，
      teamNameArray 比赛双方 [id],
      remarks 备注 string，
      inningNum 局数 int，
      scoreList 比分 [(int, int),]，
      hasRewarded 是否兑现 bool
-
+     createTime 时间 NSDate
  */
 class MatchInfo {
     var id: String = ""
@@ -27,15 +28,4 @@ class MatchInfo {
     var scoreList: [[Int]] = []
     var hasRewarded: Bool = false
     var createTime: NSDate?
-}
-
-class DataHolder {
-
-    var matchList: [MatchInfo]
-
-    //单例
-    static let shareInstance = DataHolder()
-    private init() {
-        matchList = []
-    }
 }

@@ -235,6 +235,14 @@ class DetailViewController: UITableViewController {
             info.scoreList.append([Int(stepL.value), Int(stepR.value)])
         }
 
+        if curMatchId == "" {
+            saveForCreate(info)
+        } else {
+            saveForChange(info)
+        }
+    }
+
+    func saveForCreate(info: MatchInfo) {
         //传输数据，成功后返回，否则弹框提示
         let loading = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         UIApplication.sharedApplication().keyWindow?.addSubview(loading)
@@ -253,26 +261,72 @@ class DetailViewController: UITableViewController {
             if suc == true {
                 self.navigationController!.popViewControllerAnimated(true)
             } else {
-                let alert = UIAlertView(title: "错误", message: "可能没网", delegate: self, cancelButtonTitle: "好吧")
+                let alert = UIAlertView(title: "错误", message: "可能没网", delegate: nil, cancelButtonTitle: "好吧")
                 alert.show()
             }
         })
     }
 
-    var curMatchIndex: Int = -1
+    func saveForChange(info: MatchInfo) {
+        let alertView = UIAlertView()
+        alertView.title = "提示"
+        alertView.message = "您确定要修改这场比赛的结果吗？"
+        alertView.addButtonWithTitle("取消")
+        alertView.addButtonWithTitle("确定")
+        alertView.cancelButtonIndex = 0
+        alertView.delegate = self
+        alertView.show()
+    }
+
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        if buttonIndex == alertView.cancelButtonIndex {
+            print("点击了取消")
+        } else {
+            print("点击了确认")
+        }
+    }
+
+    var curMatchId: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         print("enter detail")
 
         cellList = [cell1, cell2, cell3, cell4, cell5]
 
-        if curMatchIndex < 0 { //创建
-            cell4.hidden = true
-            cell5.hidden = true
-            return
+        if curMatchId == "" { //创建
+            initForCreate()
+        } else {
+            initForShowDetail()
         }
+    }
 
-        let match: MatchInfo = DataHolder.shareInstance.matchList[curMatchIndex]
+    func initForCreate() {
+        cell4.hidden = true
+        cell5.hidden = true
+    }
+
+    func initForShowDetail() {
+        let match = Network.shareInstance.getMatch(curMatchId)
+
+        inningName.text = match.matchName
+        inningNumLabel.text = String(match.inningNum)
+        finishSwitch.on = match.hasRewarded
+
+//        var index = 0
+//        for score in match.scoreList {
+//            let cell = cellList[index]
+//            let stepL = cell.viewWithTag(11) as! UIStepper
+//            let stepR = cell.viewWithTag(12) as! UIStepper
+//
+//            stepL.value = Double(score[0])
+//            stepR.value = Double(score[1])
+//            index += 1
+//        }
+//
+//        for c in index ..< cellList.count {
+//            cellList[c].hidden = true
+//        }
+
     }
 
     override func didReceiveMemoryWarning() {

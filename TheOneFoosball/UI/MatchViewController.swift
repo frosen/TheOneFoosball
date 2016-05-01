@@ -14,16 +14,25 @@ class MatchViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as! DetailViewController
         if segue.identifier == "add" {
-            vc.title = "新建比赛"
             print("add")
+            vc.title = "新建比赛"
+
         } else if segue.identifier == "detail" {
-            vc.title = "比赛详情"
             print("detail")
+            vc.title = "比赛详情"
+
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let index = indexPath!.row
+            vc.curMatchId = matchList[index].id
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load")
+    }
+
+    override func viewDidAppear(animated: Bool) {
         Network.shareInstance.getMatchList({b, list in
             if b == false {
                 let alert = UIAlertView(title: "错误", message: "可能没网", delegate: self, cancelButtonTitle: "好吧")
@@ -31,7 +40,7 @@ class MatchViewController: UITableViewController {
                 return
             }
 
-            self.matchList = list
+            self.matchList = list.reverse() //显示时，按照生成时间倒叙排列
             self.tableView.reloadData()
         })
     }
@@ -100,5 +109,4 @@ class MatchViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 66.0
     }
-
 }

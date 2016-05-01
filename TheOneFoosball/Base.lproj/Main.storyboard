@@ -1949,7 +1949,7 @@
                                     <outlet property="rightTeamName" destination="w72-kD-UaD" id="pto-2a-SQZ"/>
                                     <outlet property="rightTeamScore" destination="F8f-Zo-VFo" id="EKs-nw-pcQ"/>
                                     <outlet property="scoreDetail" destination="7bo-bi-CzZ" id="44x-fs-1DB"/>
-                                    <segue destination="RmV-zl-hW2" kind="showDetail" identifier="detail" id="E1r-Xv-ZcO"/>
+                                    <segue destination="RmV-zl-hW2" kind="show" identifier="detail" id="U2K-kx-Suf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1961,7 +1961,7 @@
                     <navigationItem key="navigationItem" title="桌球积分系统" id="VjS-Uf-9en">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6Gu-8z-RVi">
                             <connections>
-                                <segue destination="RmV-zl-hW2" kind="show" identifier="add" id="iKF-nI-oPI"/>
+                                <segue destination="RmV-zl-hW2" kind="show" identifier="add" id="NqM-Ve-RXv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1988,6 +1988,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iKF-nI-oPI"/>
+        <segue reference="U2K-kx-Suf"/>
     </inferredMetricsTieBreakers>
 </document>
