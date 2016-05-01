@@ -141,14 +141,20 @@ class DetailViewController: UITableViewController {
         }
 
         //传输数据，成功后返回，否则弹框提示
-        let loading = UIActivityIndicatorView()
-        view.addSubview(loading)
-        loading.center = view.center
-        loading.activityIndicatorViewStyle = .White
+        let loading = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        UIApplication.sharedApplication().keyWindow?.addSubview(loading)
+        loading.center = (UIApplication.sharedApplication().keyWindow?.center)!
+        loading.backgroundColor = UIColor.blackColor()
+        loading.alpha = 0.5
+        loading.activityIndicatorViewStyle = .WhiteLarge
         loading.startAnimating()
+
+        navigationController!.view.userInteractionEnabled = false
 
         Network.shareInstance.createMatch(info, callback: { suc, e in
             loading.stopAnimating()
+            self.navigationController!.view.userInteractionEnabled = true
+
             if suc == true {
                 self.navigationController!.popViewControllerAnimated(true)
             } else {
@@ -156,7 +162,6 @@ class DetailViewController: UITableViewController {
                 alert.show()
             }
         })
-
     }
 
     override func viewDidLoad() {

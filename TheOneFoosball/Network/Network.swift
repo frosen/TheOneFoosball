@@ -61,7 +61,7 @@ class Network {
     func getMatchList() ->[MatchInfo] {
         let obj = AVObject(className: "match_list")
         obj.fetchInBackgroundWithBlock({o, e in
-            print(o.dynamicType, e.dynamicType)
+
 
             let q2 = AVQuery(className: "match_list")
             let objList2 = q2.findObjects()
