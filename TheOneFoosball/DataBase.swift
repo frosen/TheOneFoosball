@@ -19,12 +19,14 @@ import Foundation
 
  */
 class MatchInfo {
+    var id: String = ""
     var matchName: String = ""
     var teamNameArray: [String] = []
     var remarks: String = ""
     var inningNum: Int = 1
     var scoreList: [[Int]] = []
     var hasRewarded: Bool = false
+    var createTime: NSDate?
 }
 
 class DataHolder {

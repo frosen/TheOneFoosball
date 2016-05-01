@@ -43,13 +43,7 @@ class Network {
         let option = AVSaveOption()
         option.fetchWhenSave = true
 
-        obj.saveInBackgroundWithOption(option, block: { suc, e in
-            if suc == true {
-                self.getMatchList()
-
-            }
-            callback(suc: true, e: e)
-        })
+        obj.saveInBackgroundWithOption(option, block: callback)
     }
 
     //更新比赛
@@ -58,27 +52,34 @@ class Network {
     }
 
     //获取比赛信息表
-    func getMatchList() ->[MatchInfo] {
-        let obj = AVObject(className: "match_list")
-        obj.fetchInBackgroundWithBlock({o, e in
-
-
-            let q2 = AVQuery(className: "match_list")
-            let objList2 = q2.findObjects()
-            for oo in objList2 {
-                print(oo.objectForKey("matchName"), oo.objectId)
-            }
-        })
-
+    func getMatchList(callback: (suc: Bool, list: [MatchInfo]) -> Void) {
         let q = AVQuery(className: "match_list")
         let objList = q.findObjects()
 
-        let ret: [MatchInfo] = []
+        AVObject.fetchAllIfNeededInBackground(objList, block: {list, e in
+            if list == nil {
+                callback(suc: false, list: [])
+                return
+            }
 
-        for obj in objList {
-            print(obj.objectForKey("matchName"), obj.objectId)
-        }
+            let objList = list as! [AVObject]
+            var matchList: [MatchInfo] = []
 
-        return ret
+            for obj in objList {
+                let match = MatchInfo()
+                match.id = obj.objectId as String
+                match.matchName = obj.objectForKey("matchName") as! String
+                match.teamNameArray = obj.objectForKey("teamNameArray") as! [String]
+                match.remarks = obj.objectForKey("remarks") as! String
+                match.inningNum = obj.objectForKey("inningNum") as! Int
+                match.scoreList = obj.objectForKey("scoreList") as! [[Int]]
+                match.hasRewarded = obj.objectForKey("hasRewarded") as! Bool
+                match.createTime = obj.createdAt
+                matchList.append(match)
+            }
+
+            callback(suc: true, list: matchList)
+        })
+
     }
 }

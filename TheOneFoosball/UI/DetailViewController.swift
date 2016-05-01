@@ -109,15 +109,111 @@ class DetailViewController: UITableViewController {
     //3
     @IBOutlet weak var cell3: UIView!
 
+    @IBOutlet weak var leftScore3: UILabel!
+    @IBOutlet weak var rightScore3: UILabel!
+    @IBOutlet weak var leftStepper3: UIStepper!
+    @IBOutlet weak var rightStepper3: UIStepper!
+
+    @IBAction func changeLeft3(sender: UIStepper) {
+        leftScore3.text = String(Int(sender.value))
+    }
+
+    @IBAction func changeRight3(sender: UIStepper) {
+        rightScore3.text = String(Int(sender.value))
+    }
+
+    @IBAction func leftBtnZero3(sender: AnyObject) {
+        leftStepper3.value = 0
+        leftScore3.text = "0"
+    }
+
+    @IBAction func leftBtnTen3(sender: AnyObject) {
+        leftStepper3.value = 10
+        leftScore3.text = "10"
+    }
+
+    @IBAction func rightBtnZero3(sender: AnyObject) {
+        rightStepper3.value = 0
+        rightScore3.text = "0"
+    }
+
+    @IBAction func rightBtnTen3(sender: AnyObject) {
+        rightStepper3.value = 10
+        rightScore3.text = "10"
+    }
 
     //4
     @IBOutlet weak var cell4: UIView!
+
+    @IBOutlet weak var leftScore4: UILabel!
+    @IBOutlet weak var rightScore4: UILabel!
+    @IBOutlet weak var leftStepper4: UIStepper!
+    @IBOutlet weak var rightStepper4: UIStepper!
+
+    @IBAction func changeLeft4(sender: UIStepper) {
+        leftScore4.text = String(Int(sender.value))
+    }
+
+    @IBAction func changeRight4(sender: UIStepper) {
+        rightScore4.text = String(Int(sender.value))
+    }
+
+    @IBAction func leftBtnZero4(sender: AnyObject) {
+        leftStepper4.value = 0
+        leftScore4.text = "0"
+    }
+
+    @IBAction func leftBtnTen4(sender: AnyObject) {
+        leftStepper4.value = 10
+        leftScore4.text = "10"
+    }
+
+    @IBAction func rightBtnZero4(sender: AnyObject) {
+        rightStepper4.value = 0
+        rightScore4.text = "0"
+    }
+
+    @IBAction func rightBtnTen4(sender: AnyObject) {
+        rightStepper4.value = 10
+        rightScore4.text = "10"
+    }
 
 
     //5
     @IBOutlet weak var cell5: UIView!
 
+    @IBOutlet weak var leftScore5: UILabel!
+    @IBOutlet weak var rightScore5: UILabel!
+    @IBOutlet weak var leftStepper5: UIStepper!
+    @IBOutlet weak var rightStepper5: UIStepper!
 
+    @IBAction func changeLeft5(sender: UIStepper) {
+        leftScore5.text = String(Int(sender.value))
+    }
+
+    @IBAction func changeRight5(sender: UIStepper) {
+        rightScore5.text = String(Int(sender.value))
+    }
+
+    @IBAction func leftBtnZero5(sender: AnyObject) {
+        leftStepper5.value = 0
+        leftScore5.text = "0"
+    }
+
+    @IBAction func leftBtnTen5(sender: AnyObject) {
+        leftStepper5.value = 10
+        leftScore5.text = "10"
+    }
+
+    @IBAction func rightBtnZero5(sender: AnyObject) {
+        rightStepper5.value = 0
+        rightScore5.text = "0"
+    }
+
+    @IBAction func rightBtnTen5(sender: AnyObject) {
+        rightStepper5.value = 10
+        rightScore5.text = "10"
+    }
 
     //导航
     @IBAction func onBack(sender: AnyObject) {
@@ -132,12 +228,11 @@ class DetailViewController: UITableViewController {
 
         info.inningNum = Int(inningNumStepper.value)
 
-        for k in 1...info.inningNum {
+        for k in 0..<info.inningNum {
             let stepL = cellList[k].viewWithTag(11) as! UIStepper
             let stepR = cellList[k].viewWithTag(12) as! UIStepper
 
             info.scoreList.append([Int(stepL.value), Int(stepR.value)])
-
         }
 
         //传输数据，成功后返回，否则弹框提示
@@ -164,10 +259,20 @@ class DetailViewController: UITableViewController {
         })
     }
 
+    var curMatchIndex: Int = -1
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("enter detail")
 
         cellList = [cell1, cell2, cell3, cell4, cell5]
+
+        if curMatchIndex < 0 { //创建
+            cell4.hidden = true
+            cell5.hidden = true
+            return
+        }
+
+        let match: MatchInfo = DataHolder.shareInstance.matchList[curMatchIndex]
     }
 
     override func didReceiveMemoryWarning() {
