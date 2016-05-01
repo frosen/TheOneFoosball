@@ -35,6 +35,8 @@ class DetailViewController: UITableViewController {
 
     //小比分
     var cellList: [UIView] = []
+    var stepperList: [[UIStepper]] = []
+    var scoreLblList: [[UILabel]] = []
 
     //1
     @IBOutlet weak var cell1: UIView!
@@ -229,10 +231,8 @@ class DetailViewController: UITableViewController {
         info.inningNum = Int(inningNumStepper.value)
 
         for k in 0..<info.inningNum {
-            let stepL = cellList[k].viewWithTag(11) as! UIStepper
-            let stepR = cellList[k].viewWithTag(12) as! UIStepper
-
-            info.scoreList.append([Int(stepL.value), Int(stepR.value)])
+            let steppers = stepperList[k]
+            info.scoreList.append([Int(steppers[0].value), Int(steppers[1].value)])
         }
 
         if curMatchId == "" {
@@ -292,6 +292,8 @@ class DetailViewController: UITableViewController {
         print("enter detail")
 
         cellList = [cell1, cell2, cell3, cell4, cell5]
+        stepperList = [[leftStepper1, rightStepper1], [leftStepper2, rightStepper2], [leftStepper3, rightStepper3], [leftStepper4, rightStepper4], [leftStepper5, rightStepper5]]
+        scoreLblList = [[leftScore1, rightScore1], [leftScore2, rightScore2], [leftScore3, rightScore3], [leftScore4, rightScore4], [leftScore5, rightScore5]]
 
         if curMatchId == "" { //创建
             initForCreate()
@@ -312,20 +314,23 @@ class DetailViewController: UITableViewController {
         inningNumLabel.text = String(match.inningNum)
         finishSwitch.on = match.hasRewarded
 
-//        var index = 0
-//        for score in match.scoreList {
-//            let cell = cellList[index]
-//            let stepL = cell.viewWithTag(11) as! UIStepper
-//            let stepR = cell.viewWithTag(12) as! UIStepper
-//
-//            stepL.value = Double(score[0])
-//            stepR.value = Double(score[1])
-//            index += 1
-//        }
-//
-//        for c in index ..< cellList.count {
-//            cellList[c].hidden = true
-//        }
+        var index = 0
+        for score in match.scoreList {
+            let steppers = stepperList[index]
+
+            steppers[0].value = Double(score[0])
+            steppers[1].value = Double(score[1])
+
+            let lbls = scoreLblList[index]
+            lbls[0].text = String(score[0])
+            lbls[1].text = String(score[1])
+
+            index += 1
+        }
+
+        for c in index ..< cellList.count {
+            cellList[c].hidden = true
+        }
 
     }
 

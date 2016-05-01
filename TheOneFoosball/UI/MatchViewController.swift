@@ -68,7 +68,7 @@ class MatchViewController: UITableViewController {
         cell.matchName.text = info.matchName
 
         cell.leftTeamName.text = info.teamNameArray[0]
-        cell.rightTeamScore.text = info.teamNameArray[1]
+        cell.rightTeamName.text = info.teamNameArray[1]
 
         //比分
         let scoreList = info.scoreList

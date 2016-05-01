@@ -332,7 +332,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ymm-q0-tFu">
+                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ymm-q0-tFu">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeLeft1:" destination="RmV-zl-hW2" eventType="valueChanged" id="ahg-gQ-d8X"/>
@@ -404,7 +404,7 @@
                                                         <action selector="leftBtnOne1:" destination="RmV-zl-hW2" eventType="touchUpInside" id="X0p-cI-npn"/>
                                                     </connections>
                                                 </button>
-                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JQ8-fq-zD4">
+                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JQ8-fq-zD4">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeRight1:" destination="RmV-zl-hW2" eventType="valueChanged" id="1KT-C5-Wl4"/>
@@ -553,7 +553,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-tw-65q">
+                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-tw-65q">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeLeft2:" destination="RmV-zl-hW2" eventType="valueChanged" id="4IN-56-Gwy"/>
@@ -682,7 +682,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3do-Eq-oRU">
+                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3do-Eq-oRU">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeRight2:" destination="RmV-zl-hW2" eventType="valueChanged" id="Rg8-Dv-BOY"/>
@@ -831,7 +831,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-CP-1i6">
+                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-CP-1i6">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeLeft3:" destination="RmV-zl-hW2" eventType="valueChanged" id="6UO-4e-t8T"/>
@@ -856,7 +856,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-fE-CMH">
+                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-fE-CMH">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeRight3:" destination="RmV-zl-hW2" eventType="valueChanged" id="bkz-hg-OTF"/>
@@ -1138,7 +1138,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-WD-u5H">
+                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-WD-u5H">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeLeft4:" destination="RmV-zl-hW2" eventType="valueChanged" id="5Nn-Qk-eCW"/>
@@ -1163,7 +1163,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JVy-D4-ngV">
+                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JVy-D4-ngV">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeRight4:" destination="RmV-zl-hW2" eventType="valueChanged" id="gxu-Jw-Kus"/>
@@ -1404,12 +1404,6 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Z4-sh-56b">
-                                                    <rect key="frame" x="-47" y="-14" width="94" height="29"/>
-                                                    <connections>
-                                                        <action selector="changeLeft5:" destination="RmV-zl-hW2" eventType="valueChanged" id="hFd-3e-8FD"/>
-                                                    </connections>
-                                                </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbi-Pe-DQW">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <state key="normal" title="=10"/>
@@ -1429,7 +1423,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-wO-Kgj">
+                                                <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-wO-Kgj">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="changeRight5:" destination="RmV-zl-hW2" eventType="valueChanged" id="pNp-6i-egU"/>
@@ -1482,6 +1476,12 @@
                                                         <action selector="leftBtnZero5:" destination="RmV-zl-hW2" eventType="touchUpInside" id="XUK-qa-0jM"/>
                                                     </connections>
                                                 </button>
+                                                <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8Z4-sh-56b">
+                                                    <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="changeLeft5:" destination="RmV-zl-hW2" eventType="valueChanged" id="hFd-3e-8FD"/>
+                                                    </connections>
+                                                </stepper>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="V1u-Vj-vM3" firstAttribute="centerX" secondItem="KaC-qW-L1v" secondAttribute="centerX" id="0zL-zS-Mhz"/>
@@ -1521,7 +1521,6 @@
                                                     <exclude reference="No8-Mm-mWv"/>
                                                     <exclude reference="1le-Dp-VGr"/>
                                                     <exclude reference="KaC-qW-L1v"/>
-                                                    <exclude reference="8Z4-sh-56b"/>
                                                     <exclude reference="Sbi-Pe-DQW"/>
                                                     <exclude reference="lPM-yz-5ba"/>
                                                     <exclude reference="V1u-Vj-vM3"/>
@@ -1529,6 +1528,7 @@
                                                     <exclude reference="JiK-GX-4Ef"/>
                                                     <exclude reference="lGh-1C-GFS"/>
                                                     <exclude reference="X72-Dh-10M"/>
+                                                    <exclude reference="8Z4-sh-56b"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="fEn-v7-WQo"/>
@@ -1563,7 +1563,6 @@
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="No8-Mm-mWv"/>
-                                                    <include reference="8Z4-sh-56b"/>
                                                     <include reference="Sbi-Pe-DQW"/>
                                                     <include reference="lPM-yz-5ba"/>
                                                     <include reference="V1u-Vj-vM3"/>
@@ -1571,6 +1570,7 @@
                                                     <include reference="JiK-GX-4Ef"/>
                                                     <include reference="lGh-1C-GFS"/>
                                                     <include reference="X72-Dh-10M"/>
+                                                    <include reference="8Z4-sh-56b"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="sxn-xx-YqR"/>
