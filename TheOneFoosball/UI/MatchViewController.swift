@@ -27,12 +27,26 @@ class MatchViewController: UITableViewController {
         }
     }
 
+    @IBAction func refreshList(sender: UIRefreshControl) {
+        if sender.refreshing == true {
+            sender.attributedTitle = NSAttributedString(string: "加载中")
+            refreshInfo({
+                sender.endRefreshing()
+                sender.attributedTitle = NSAttributedString(string: "刷新")
+            })
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("view did load")
     }
 
     override func viewDidAppear(animated: Bool) {
+        refreshInfo({})
+    }
+
+    func refreshInfo(callback: () -> Void) {
         Network.shareInstance.getMatchList({b, list in
             if b == false {
                 let alert = UIAlertView(title: "错误", message: "可能没网", delegate: self, cancelButtonTitle: "好吧")
@@ -42,6 +56,7 @@ class MatchViewController: UITableViewController {
 
             self.matchList = list.reverse() //显示时，按照生成时间倒叙排列
             self.tableView.reloadData()
+            callback()
         })
     }
 
