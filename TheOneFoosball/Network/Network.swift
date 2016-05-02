@@ -21,17 +21,23 @@ import Foundation
 
 class Network {
 
+    let OBJ_NAME = "match_list"
+
     //单例
     static let shareInstance = Network()
     private init() {
         AVOSCloud.setApplicationId("o5nq2XE8H5XUlo9S94F9tioJ-gzGzoHsz", clientKey: "vJrjiBn25QQ4FmvIKhVx8bQ2")
     }
 
-    //创建一场比赛
-    func createMatch(match: MatchInfo, callback: (suc: Bool, e: NSError?) -> Void) {
+    //创建或者更新一场比赛
+    func updateMatch(match: MatchInfo, callback: (suc: Bool, e: NSError?) -> Void) {
         print("create match")
 
-        let obj = AVObject(className: "match_list")
+        let obj = AVObject(className: OBJ_NAME)
+
+        if match.id != "" {
+            obj.objectId = match.id
+        }
 
         obj.setObject(match.matchName, forKey: "matchName")
         obj.setObject(match.teamNameArray, forKey: "teamNameArray")
@@ -46,20 +52,16 @@ class Network {
         obj.saveInBackgroundWithOption(option, block: callback)
     }
 
-    //更新比赛
-    func updateMatch(match: MatchInfo) {
-
-    }
-
+    //获取信息
     func getMatch(id: String) -> MatchInfo {
-        let q = AVQuery(className: "match_list")
+        let q = AVQuery(className: OBJ_NAME)
         let obj = q.getObjectWithId(id)
         return createMatchFromObj(obj)
     }
 
     //获取比赛信息表
     func getMatchList(callback: (suc: Bool, list: [MatchInfo]) -> Void) {
-        let q = AVQuery(className: "match_list")
+        let q = AVQuery(className: OBJ_NAME)
         let objList = q.findObjects()
 
         AVObject.fetchAllIfNeededInBackground(objList, block: {list, e in

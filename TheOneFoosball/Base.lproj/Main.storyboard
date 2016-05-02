@@ -47,6 +47,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-K9-qej">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="changeName:" destination="RmV-zl-hW2" eventType="touchUpInside" id="BH2-1S-8Wq"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="红牛杯" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzh-fM-ZGL">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -163,6 +167,7 @@
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="KwK-s7-JV5">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeInningNum:" destination="RmV-zl-hW2" eventType="valueChanged" id="cNe-oP-4WY"/>
                                                     </connections>
@@ -240,6 +245,7 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-UV-rOR">
                                                     <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -334,12 +340,14 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ymm-q0-tFu">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeLeft1:" destination="RmV-zl-hW2" eventType="valueChanged" id="ahg-gQ-d8X"/>
                                                     </connections>
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxf-pQ-9k0">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=10"/>
                                                     <connections>
                                                         <action selector="leftBtnTen1:" destination="RmV-zl-hW2" eventType="touchUpInside" id="tRy-kj-dNR"/>
@@ -362,6 +370,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="Tc2-EV-AAy"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=0"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -379,6 +388,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN8-CH-6TP">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=10"/>
                                                     <connections>
                                                         <action selector="rightBtnTen1:" destination="RmV-zl-hW2" eventType="touchUpInside" id="qfo-CJ-Tb1"/>
@@ -389,6 +399,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="o97-Zq-ooS"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=0"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -406,6 +417,7 @@
                                                 </button>
                                                 <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JQ8-fq-zD4">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeRight1:" destination="RmV-zl-hW2" eventType="valueChanged" id="1KT-C5-Wl4"/>
                                                     </connections>
@@ -555,12 +567,14 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-tw-65q">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeLeft2:" destination="RmV-zl-hW2" eventType="valueChanged" id="4IN-56-Gwy"/>
                                                     </connections>
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-PA-cZy">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=10"/>
                                                     <connections>
                                                         <action selector="leftBtnTen2:" destination="RmV-zl-hW2" eventType="touchUpInside" id="hQq-d0-8dq"/>
@@ -596,6 +610,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="9iy-qg-Sqg"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=0"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -613,6 +628,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiO-ba-jMq">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=10"/>
                                                     <connections>
                                                         <action selector="rightBtnTen2:" destination="RmV-zl-hW2" eventType="touchUpInside" id="ljs-je-bPU"/>
@@ -623,6 +639,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="1NO-1K-zCb"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=0"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -684,6 +701,7 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3do-Eq-oRU">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeRight2:" destination="RmV-zl-hW2" eventType="valueChanged" id="Rg8-Dv-BOY"/>
                                                     </connections>
@@ -833,13 +851,16 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-CP-1i6">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeLeft3:" destination="RmV-zl-hW2" eventType="valueChanged" id="6UO-4e-t8T"/>
                                                     </connections>
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCQ-eX-ggK">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="=10"/>
+                                                    <state key="normal" title="=10">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="leftBtnTen3:" destination="RmV-zl-hW2" eventType="touchUpInside" id="Fye-hX-ocb"/>
                                                     </connections>
@@ -858,6 +879,7 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-fE-CMH">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeRight3:" destination="RmV-zl-hW2" eventType="valueChanged" id="bkz-hg-OTF"/>
                                                     </connections>
@@ -867,7 +889,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="a6i-eY-z6T"/>
                                                     </constraints>
-                                                    <state key="normal" title="=0"/>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="a6i-eY-z6T"/>
@@ -884,6 +908,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-40-cK6">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="=10"/>
                                                     <connections>
                                                         <action selector="rightBtnTen3:" destination="RmV-zl-hW2" eventType="touchUpInside" id="Tdl-0e-vKq"/>
@@ -935,7 +960,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="PgC-2C-Mz6"/>
                                                     </constraints>
-                                                    <state key="normal" title="=0"/>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="PgC-2C-Mz6"/>
@@ -1140,13 +1167,16 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-WD-u5H">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeLeft4:" destination="RmV-zl-hW2" eventType="valueChanged" id="5Nn-Qk-eCW"/>
                                                     </connections>
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb1-CA-U4I">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="=10"/>
+                                                    <state key="normal" title="=10">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="leftBtnTen4:" destination="RmV-zl-hW2" eventType="touchUpInside" id="kZw-3b-SVy"/>
                                                     </connections>
@@ -1165,33 +1195,16 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JVy-D4-ngV">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeRight4:" destination="RmV-zl-hW2" eventType="valueChanged" id="gxu-Jw-Kus"/>
                                                     </connections>
                                                 </stepper>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKB-uu-YgT">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="rRR-sd-k45"/>
-                                                    </constraints>
-                                                    <state key="normal" title="=0"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="rRR-sd-k45"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <include reference="rRR-sd-k45"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="rightBtnZero4:" destination="RmV-zl-hW2" eventType="touchUpInside" id="jdg-LR-5r4"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-bJ-Txo">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="=10"/>
+                                                    <state key="normal" title="=10">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="rightBtnTen4:" destination="RmV-zl-hW2" eventType="touchUpInside" id="yhn-fd-hzH"/>
                                                     </connections>
@@ -1201,7 +1214,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="oTx-dm-iVf"/>
                                                     </constraints>
-                                                    <state key="normal" title="=0"/>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="oTx-dm-iVf"/>
@@ -1214,6 +1229,28 @@
                                                     </variation>
                                                     <connections>
                                                         <action selector="leftBtnZero4:" destination="RmV-zl-hW2" eventType="touchUpInside" id="474-7t-bn4"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKB-uu-YgT">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="rRR-sd-k45"/>
+                                                    </constraints>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="rRR-sd-k45"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="rRR-sd-k45"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="rightBtnZero4:" destination="RmV-zl-hW2" eventType="touchUpInside" id="jdg-LR-5r4"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1264,9 +1301,9 @@
                                                     <exclude reference="gvF-Th-3fe"/>
                                                     <exclude reference="L7F-Pp-mmj"/>
                                                     <exclude reference="JVy-D4-ngV"/>
-                                                    <exclude reference="UKB-uu-YgT"/>
                                                     <exclude reference="M4a-bJ-Txo"/>
                                                     <exclude reference="kwH-n1-txH"/>
+                                                    <exclude reference="UKB-uu-YgT"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="Why-BH-aam"/>
@@ -1306,9 +1343,9 @@
                                                     <include reference="gvF-Th-3fe"/>
                                                     <include reference="L7F-Pp-mmj"/>
                                                     <include reference="JVy-D4-ngV"/>
-                                                    <include reference="UKB-uu-YgT"/>
                                                     <include reference="M4a-bJ-Txo"/>
                                                     <include reference="kwH-n1-txH"/>
+                                                    <include reference="UKB-uu-YgT"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="Why-BH-aam"/>
@@ -1406,7 +1443,9 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbi-Pe-DQW">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="=10"/>
+                                                    <state key="normal" title="=10">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="leftBtnTen5:" destination="RmV-zl-hW2" eventType="touchUpInside" id="O47-BG-Uo1"/>
                                                     </connections>
@@ -1425,6 +1464,7 @@
                                                 </label>
                                                 <stepper opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-wO-Kgj">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeRight5:" destination="RmV-zl-hW2" eventType="valueChanged" id="pNp-6i-egU"/>
                                                     </connections>
@@ -1434,7 +1474,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="7J7-uP-I9T"/>
                                                     </constraints>
-                                                    <state key="normal" title="=0"/>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="7J7-uP-I9T"/>
@@ -1451,7 +1493,9 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGh-1C-GFS">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="=10"/>
+                                                    <state key="normal" title="=10">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="rightBtnTen5:" destination="RmV-zl-hW2" eventType="touchUpInside" id="7MS-tV-2IX"/>
                                                     </connections>
@@ -1461,7 +1505,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="nhZ-nM-ilm"/>
                                                     </constraints>
-                                                    <state key="normal" title="=0"/>
+                                                    <state key="normal" title="=0">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="nhZ-nM-ilm"/>
@@ -1478,6 +1524,7 @@
                                                 </button>
                                                 <stepper opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8Z4-sh-56b">
                                                     <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="changeLeft5:" destination="RmV-zl-hW2" eventType="valueChanged" id="hFd-3e-8FD"/>
                                                     </connections>
@@ -1622,11 +1669,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Ofk-on-5Yg">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JE1-fP-28I">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onBack:" destination="RmV-zl-hW2" id="uGc-dk-JdA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="u0X-wP-Njl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onSave:" destination="RmV-zl-hW2" id="qfs-cr-fAW"/>
                             </connections>
@@ -1675,7 +1724,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6NO-Us-pTJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="67" id="hZX-Rg-GuF" customClass="MatchCell" customModule="TheOneFoosball" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="67"/>
@@ -1694,7 +1743,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.68658694639999995" blue="0.4226023659" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.19858156028368795" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="rNN-xN-gEB" firstAttribute="centerY" secondItem="Sa6-sC-JpF" secondAttribute="centerY" id="Klt-Sb-Bv3"/>
                                                 <constraint firstItem="rNN-xN-gEB" firstAttribute="centerX" secondItem="Sa6-sC-JpF" secondAttribute="centerX" id="TQi-iz-sem"/>
@@ -1742,7 +1791,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.68658694639999995" blue="0.4226023659" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="FdP-Nf-pzj" firstAttribute="centerX" secondItem="Bii-ZS-3gy" secondAttribute="centerX" id="8Bx-kB-Muq"/>
                                                 <constraint firstAttribute="height" constant="58" id="Ksf-RF-HHp"/>
@@ -1885,23 +1933,23 @@
                                             <exclude reference="j6W-9T-gRI"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="5eL-9F-On8"/>
-                                            <exclude reference="Vxc-75-nfc"/>
-                                            <exclude reference="E8c-rL-4ZW"/>
-                                            <exclude reference="edR-dK-mE3"/>
                                             <exclude reference="8P4-F4-3za"/>
                                             <exclude reference="NEy-z8-vjm"/>
-                                            <exclude reference="7EI-xn-kbB"/>
-                                            <exclude reference="stN-Bp-0OA"/>
-                                            <exclude reference="LZo-fx-4xu"/>
-                                            <exclude reference="qUB-ZH-yMO"/>
                                             <exclude reference="5oo-NU-DHO"/>
                                             <exclude reference="sZg-Q1-yqv"/>
+                                            <exclude reference="E8c-rL-4ZW"/>
+                                            <exclude reference="edR-dK-mE3"/>
+                                            <exclude reference="LZo-fx-4xu"/>
+                                            <exclude reference="qUB-ZH-yMO"/>
                                             <exclude reference="SsC-m9-6gC"/>
+                                            <exclude reference="7EI-xn-kbB"/>
+                                            <exclude reference="stN-Bp-0OA"/>
                                             <exclude reference="4yz-Qe-LWf"/>
                                             <exclude reference="I2G-ak-oeY"/>
                                             <exclude reference="ZgJ-SG-1en"/>
                                             <exclude reference="sGv-4C-SPa"/>
+                                            <exclude reference="5eL-9F-On8"/>
+                                            <exclude reference="Vxc-75-nfc"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -1920,23 +1968,23 @@
                                             <include reference="j6W-9T-gRI"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="5eL-9F-On8"/>
-                                            <include reference="Vxc-75-nfc"/>
-                                            <include reference="E8c-rL-4ZW"/>
-                                            <include reference="edR-dK-mE3"/>
                                             <include reference="8P4-F4-3za"/>
                                             <include reference="NEy-z8-vjm"/>
-                                            <include reference="7EI-xn-kbB"/>
-                                            <include reference="stN-Bp-0OA"/>
-                                            <include reference="LZo-fx-4xu"/>
-                                            <include reference="qUB-ZH-yMO"/>
                                             <include reference="5oo-NU-DHO"/>
                                             <include reference="sZg-Q1-yqv"/>
+                                            <include reference="E8c-rL-4ZW"/>
+                                            <include reference="edR-dK-mE3"/>
+                                            <include reference="LZo-fx-4xu"/>
+                                            <include reference="qUB-ZH-yMO"/>
                                             <include reference="SsC-m9-6gC"/>
+                                            <include reference="7EI-xn-kbB"/>
+                                            <include reference="stN-Bp-0OA"/>
                                             <include reference="4yz-Qe-LWf"/>
                                             <include reference="I2G-ak-oeY"/>
                                             <include reference="ZgJ-SG-1en"/>
                                             <include reference="sGv-4C-SPa"/>
+                                            <include reference="5eL-9F-On8"/>
+                                            <include reference="Vxc-75-nfc"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -1960,11 +2008,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="桌球积分系统" id="VjS-Uf-9en">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6Gu-8z-RVi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="RmV-zl-hW2" kind="show" identifier="add" id="NqM-Ve-RXv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="tXe-5a-eR2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-E6-yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1974,9 +2028,14 @@
         <scene sceneID="Ust-v0-gLI">
             <objects>
                 <navigationController id="WI6-96-D9a" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NIz-9G-W7Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="QZJ-Fc-wfz" kind="relationship" relationship="rootViewController" id="CRm-Zt-kXM"/>

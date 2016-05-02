@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,39 +17,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="桌球积分系统" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-oc-Ide">
-                                <rect key="frame" x="160" y="251" width="280" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="QlO-ql-ePb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="111.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nYK-AJ-tkB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="乐颜真棒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw1-FI-cS2">
                                 <rect key="frame" x="248" y="428" width="104" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="0mg-Kc-QLT"/>
                                     <constraint firstAttribute="height" constant="48" id="DfF-F1-Bsh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="桌球积分系统" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-oc-Ide">
+                                <rect key="frame" x="160" y="157" width="280" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="QlO-ql-ePb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P7i-oc-Ide" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0uw-xG-CCn"/>
+                            <constraint firstItem="P7i-oc-Ide" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-94" id="0uw-xG-CCn"/>
+                            <constraint firstItem="nYK-AJ-tkB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="EOH-Ph-wpD"/>
                             <constraint firstItem="P7i-oc-Ide" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EiL-1E-GjK"/>
-                            <constraint firstItem="vw1-FI-cS2" firstAttribute="top" secondItem="P7i-oc-Ide" secondAttribute="bottom" constant="79" id="fop-9B-4gH"/>
+                            <constraint firstItem="nYK-AJ-tkB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="L14-nn-0Sg"/>
+                            <constraint firstItem="nYK-AJ-tkB" firstAttribute="centerX" secondItem="vw1-FI-cS2" secondAttribute="centerX" id="Yi4-D5-zH7"/>
+                            <constraint firstItem="vw1-FI-cS2" firstAttribute="top" secondItem="P7i-oc-Ide" secondAttribute="bottom" constant="173" id="fop-9B-4gH"/>
                             <constraint firstItem="vw1-FI-cS2" firstAttribute="centerX" secondItem="P7i-oc-Ide" secondAttribute="centerX" id="iyW-3G-wFC"/>
+                            <constraint firstItem="nYK-AJ-tkB" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="qqI-Ct-zxa"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vw1-FI-cS2" secondAttribute="bottom" constant="124" id="st1-5M-eCr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nYK-AJ-tkB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EOH-Ph-wpD"/>
+                                <exclude reference="L14-nn-0Sg"/>
+                                <exclude reference="Yi4-D5-zH7"/>
+                                <exclude reference="qqI-Ct-zxa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nYK-AJ-tkB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EOH-Ph-wpD"/>
+                                <include reference="L14-nn-0Sg"/>
+                                <include reference="Yi4-D5-zH7"/>
+                                <include reference="qqI-Ct-zxa"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="111.jpg" width="163" height="220"/>
+    </resources>
 </document>

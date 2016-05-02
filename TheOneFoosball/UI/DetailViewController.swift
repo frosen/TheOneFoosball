@@ -12,6 +12,17 @@ class DetailViewController: UITableViewController {
 
     //名称
     @IBOutlet weak var inningName: UILabel!
+    @IBAction func changeName(sender: UIButton) {
+        let alertView = UIAlertView()
+        alertView.title = "请输入比赛名称"
+        alertView.alertViewStyle = .PlainTextInput
+
+        alertView.addButtonWithTitle("取消")
+        alertView.addButtonWithTitle("确定")
+        alertView.cancelButtonIndex = 0
+        alertView.delegate = self
+        alertView.show()
+    }
 
     //场数
     @IBOutlet weak var inningNumLabel: UILabel!
@@ -229,20 +240,22 @@ class DetailViewController: UITableViewController {
         info.teamNameArray = ["海盐", "铎益"]
 
         info.inningNum = Int(inningNumStepper.value)
+        info.hasRewarded = finishSwitch.on
 
-        for k in 0..<info.inningNum {
+        for k in 0 ..< info.inningNum {
             let steppers = stepperList[k]
             info.scoreList.append([Int(steppers[0].value), Int(steppers[1].value)])
         }
 
         if curMatchId == "" {
-            saveForCreate(info)
+            saveMatch(info)
         } else {
+            info.id = curMatchId
             saveForChange(info)
         }
     }
 
-    func saveForCreate(info: MatchInfo) {
+    func saveMatch(info: MatchInfo) {
         //传输数据，成功后返回，否则弹框提示
         let loading = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         UIApplication.sharedApplication().keyWindow?.addSubview(loading)
@@ -254,7 +267,7 @@ class DetailViewController: UITableViewController {
 
         navigationController!.view.userInteractionEnabled = false
 
-        Network.shareInstance.createMatch(info, callback: { suc, e in
+        Network.shareInstance.updateMatch(info, callback: { suc, e in
             loading.stopAnimating()
             self.navigationController!.view.userInteractionEnabled = true
 
@@ -267,7 +280,9 @@ class DetailViewController: UITableViewController {
         })
     }
 
+    var matchForSave: MatchInfo? = nil
     func saveForChange(info: MatchInfo) {
+        matchForSave = info
         let alertView = UIAlertView()
         alertView.title = "提示"
         alertView.message = "您确定要修改这场比赛的结果吗？"
@@ -283,6 +298,15 @@ class DetailViewController: UITableViewController {
             print("点击了取消")
         } else {
             print("点击了确认")
+            let field = alertView.textFieldAtIndex(0)
+            if field != nil {
+                let str = field!.text
+                if str != "" {
+                    inningName.text = str
+                }
+            } else {
+                saveMatch(matchForSave!)
+            }
         }
     }
 
@@ -311,6 +335,7 @@ class DetailViewController: UITableViewController {
         let match = Network.shareInstance.getMatch(curMatchId)
 
         inningName.text = match.matchName
+        inningNumStepper.value = Double(match.inningNum)
         inningNumLabel.text = String(match.inningNum)
         finishSwitch.on = match.hasRewarded
 
@@ -331,7 +356,6 @@ class DetailViewController: UITableViewController {
         for c in index ..< cellList.count {
             cellList[c].hidden = true
         }
-
     }
 
     override func didReceiveMemoryWarning() {

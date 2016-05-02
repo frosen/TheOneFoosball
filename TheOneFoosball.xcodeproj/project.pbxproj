@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65082D701CD704790004672D /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65082D6F1CD704790004672D /* 111.jpg */; };
 		655B1E521CC720710054814E /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B1E511CC720710054814E /* DataBase.swift */; };
 		655E9C631CC52CC0004680DA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E9C621CC52CC0004680DA /* Network.swift */; };
 		6566BECF1CC4A915001645AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566BECE1CC4A915001645AD /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		04CAC2AA210436DEF0540C15 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1C72235706B603DE8D6EFFE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65082D6F1CD704790004672D /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
 		655B1E511CC720710054814E /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		655E9C5B1CC52B76004680DA /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		655E9C621CC52CC0004680DA /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Network/Network.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		65082D6E1CD704790004672D /* res */ = {
+			isa = PBXGroup;
+			children = (
+				65082D6F1CD704790004672D /* 111.jpg */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		655E9C5C1CC52C2F004680DA /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 			children = (
 				6566BECD1CC4A915001645AD /* TheOneFoosball */,
 				6566BECC1CC4A915001645AD /* Products */,
+				65082D6E1CD704790004672D /* res */,
 				8B716AB76E895D1D634F64BD /* Pods */,
 				093E674662A1A7FCDDA131C1 /* Frameworks */,
 			);
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6566BEDB1CC4A915001645AD /* LaunchScreen.storyboard in Resources */,
+				65082D701CD704790004672D /* 111.jpg in Resources */,
 				6566BED81CC4A915001645AD /* Assets.xcassets in Resources */,
 				6566BED61CC4A915001645AD /* Main.storyboard in Resources */,
 			);

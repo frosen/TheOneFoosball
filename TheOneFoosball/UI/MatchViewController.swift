@@ -79,13 +79,17 @@ class MatchViewController: UITableViewController {
                 leftWin += 1
             } else if scoreTab[0] < scoreTab[1] {
                 rightWin += 1
-            } else { //平局各加一分
-                leftWin += 1
-                rightWin += 1
             }
         }
         cell.leftTeamScore.text = String(leftWin)
         cell.rightTeamScore.text = String(rightWin)
+
+        let color = UIColor(red: 0.0, green: 0.0, blue: 0.7, alpha: 1.0)
+        if leftWin > rightWin {
+            cell.leftTeamName.textColor = color
+        } else if leftWin < rightWin {
+            cell.rightTeamName.textColor = color
+        }
 
         //小分
         var scoreString: String = ""
@@ -101,7 +105,7 @@ class MatchViewController: UITableViewController {
         cell.date.text = date
 
         cell.finishShow.text = info.hasRewarded ? "已兑现" : "未兑现"
-        cell.finishShow.textColor = info.hasRewarded ? UIColor.greenColor() : UIColor.redColor()
+        cell.finishShow.textColor = info.hasRewarded ? color : UIColor.redColor()
 
         return cell
     }
