@@ -54,7 +54,7 @@ class MatchViewController: UITableViewController {
                 return
             }
 
-            self.matchList = list.reverse() //显示时，按照生成时间倒叙排列
+            
             self.tableView.reloadData()
             callback()
         })
