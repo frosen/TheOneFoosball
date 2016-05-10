@@ -1,10 +1,13 @@
 PODS:
   - AVOSCloud (3.2.6)
+  - Bugtags (1.1.9)
 
 DEPENDENCIES:
   - AVOSCloud
+  - Bugtags
 
 SPEC CHECKSUMS:
   AVOSCloud: 08ba88573fca8559dfc658942b391c4568fabfc0
+  Bugtags: cff5f312f214af51b2f4fcdd65258d1874a0fd2e
 
 COCOAPODS: 0.39.0

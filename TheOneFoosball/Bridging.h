@@ -10,5 +10,6 @@
 #define Bridging_h
 
 #import <AVOSCloud/AVOSCloud.h>
+#import <Bugtags/Bugtags.h>
 
 #endif /* Bridging_h */
